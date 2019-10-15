@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des intérimaires{% endblock %}
+
+{% block body %}
+    {% for employee in employees %}
+        <li>{{ employee.mail }}</li>
+    {% endfor %}
+{% endblock %}
