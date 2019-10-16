@@ -4,9 +4,45 @@
 {% block title %}Hello EmployeeController!{% endblock %}
 
 {% block body %}
+
     <div class="container">
-        {{ form(form) }}
+
+        {{ form_start(form) }}
+
+            <div class="row">
+                <div class="col-md-4">
+                        {{ form_label(form.lastName) }}
+                        {{ form_widget(form.lastName) }}
+                </div>
+                <div class="col-md-4">
+                        {{ form_label(form.firstName) }}
+                        {{ form_widget(form.firstName) }}
+                </div>
+
+                <div class="col-md-4">
+                        {{ form_label(form.birthDate) }}
+                        {{ form_widget(form.birthDate) }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                        {{ form_label(form.nationality) }}
+                        {{ form_widget(form.nationality) }}
+                </div>
+                <div class="col-md-4">
+                        {{ form_label(form.phoneNumber) }}
+                        {{ form_widget(form.phoneNumber) }}
+                </div>
+
+                <div class="col-md-4">
+                        {{ form_label(form.mail) }}
+                        {{ form_widget(form.mail) }}
+                </div>
+            </div>
+
+        {{ form_end(form) }}
+
     </div>
 
 {% endblock %}
-
