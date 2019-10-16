@@ -61,6 +61,51 @@ class Employee
      */
     private $UserRegistration;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $ManOurWomen;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $TypeContrat;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $startDate;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $endDate;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $identifiant;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $fonction;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $adress;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $zipCode;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $city;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -170,6 +215,114 @@ class Employee
     public function setUserRegistration(?User $UserRegistration): self
     {
         $this->UserRegistration = $UserRegistration;
+
+        return $this;
+    }
+
+    public function getManOurWomen(): ?string
+    {
+        return $this->ManOurWomen;
+    }
+
+    public function setManOurWomen(string $ManOurWomen): self
+    {
+        $this->ManOurWomen = $ManOurWomen;
+
+        return $this;
+    }
+
+    public function getTypeContrat(): ?string
+    {
+        return $this->TypeContrat;
+    }
+
+    public function setTypeContrat(string $TypeContrat): self
+    {
+        $this->TypeContrat = $TypeContrat;
+
+        return $this;
+    }
+
+    public function getStartDate(): ?\DateTimeInterface
+    {
+        return $this->startDate;
+    }
+
+    public function setStartDate(\DateTimeInterface $startDate): self
+    {
+        $this->startDate = $startDate;
+
+        return $this;
+    }
+
+    public function getEndDate(): ?\DateTimeInterface
+    {
+        return $this->endDate;
+    }
+
+    public function setEndDate(\DateTimeInterface $endDate): self
+    {
+        $this->endDate = $endDate;
+
+        return $this;
+    }
+
+    public function getIdentifiant(): ?string
+    {
+        return $this->identifiant;
+    }
+
+    public function setIdentifiant(string $identifiant): self
+    {
+        $this->identifiant = $identifiant;
+
+        return $this;
+    }
+
+    public function getFonction(): ?string
+    {
+        return $this->fonction;
+    }
+
+    public function setFonction(string $fonction): self
+    {
+        $this->fonction = $fonction;
+
+        return $this;
+    }
+
+    public function getAdress(): ?string
+    {
+        return $this->adress;
+    }
+
+    public function setAdress(string $adress): self
+    {
+        $this->adress = $adress;
+
+        return $this;
+    }
+
+    public function getZipCode(): ?int
+    {
+        return $this->zipCode;
+    }
+
+    public function setZipCode(int $zipCode): self
+    {
+        $this->zipCode = $zipCode;
+
+        return $this;
+    }
+
+    public function getCity(): ?string
+    {
+        return $this->city;
+    }
+
+    public function setCity(string $city): self
+    {
+        $this->city = $city;
 
         return $this;
     }

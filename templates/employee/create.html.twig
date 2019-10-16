@@ -9,7 +9,11 @@
 
         {{ form_start(form) }}
 
-            <div class="row">
+        <div class="row">
+                <div class="col-md-4">
+                        {{ form_label(form.manOurWomen) }}
+                        {{ form_widget(form.manOurWomen) }}
+                </div>
                 <div class="col-md-4">
                         {{ form_label(form.lastName) }}
                         {{ form_widget(form.lastName) }}
@@ -19,27 +23,74 @@
                         {{ form_widget(form.firstName) }}
                 </div>
 
+        </div>
+
+        <div class="row">
                 <div class="col-md-4">
                         {{ form_label(form.birthDate) }}
                         {{ form_widget(form.birthDate) }}
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6 offset-2">
                         {{ form_label(form.nationality) }}
                         {{ form_widget(form.nationality) }}
                 </div>
-                <div class="col-md-4">
+        </div>
+
+
+        <div class="row">
+                <div class="col-md-6">
                         {{ form_label(form.phoneNumber) }}
                         {{ form_widget(form.phoneNumber) }}
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-6">
                         {{ form_label(form.mail) }}
                         {{ form_widget(form.mail) }}
+                </div> 
+        </div>
+
+        <div class="row">
+                <div class="col-md-4">
+                        {{ form_label(form.adress) }}
+                        {{ form_widget(form.adress) }}
                 </div>
-            </div>
+                <div class="col-md-4">
+                        {{ form_label(form.zipCode) }}
+                        {{ form_widget(form.zipCode) }}
+                </div>
+
+                <div class="col-md-4">
+                        {{ form_label(form.city) }}
+                        {{ form_widget(form.city) }}
+                </div>
+        </div>
+
+        <div class="row">
+                <div class="col-md-4">
+                        {{ form_label(form.typeContrat) }}
+                        {{ form_widget(form.typeContrat) }}
+                </div>
+                <div class="col-md-4">
+                        {{ form_label(form.fonction) }}
+                        {{ form_widget(form.fonction) }}
+                </div>
+                <div class="col-md-4">
+                        {{ form_label(form.caces) }}
+                        {{ form_widget(form.caces) }}
+                </div>
+        </div>
+
+        <div class="row">
+                <div class="col-md-4">
+                        {{ form_label(form.startDate) }}
+                        {{ form_widget(form.startDate) }}
+                </div>
+                <div class="col-md-4    offset-2">
+                        {{ form_label(form.endDate) }}
+                        {{ form_widget(form.endDate) }}
+                </div>
+
+        </div>
 
         {{ form_end(form) }}
 
